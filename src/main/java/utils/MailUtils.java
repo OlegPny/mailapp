@@ -31,7 +31,7 @@ public class MailUtils {
         InputStream propsInput = null;
 
         try {
-            propsInput = new FileInputStream("settings.properties");
+            propsInput = new FileInputStream("src/main/resources/settings.properties");
             props.load(propsInput);
         } catch (IOException ex) {
             System.out.println("app.properties file not found!");
