@@ -1,6 +1,7 @@
 package utils;
 
 import javax.mail.*;
+import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -14,7 +15,7 @@ public class MailUtils {
         MimeMessage message = new MimeMessage(session);
 
         try {
-            message.setRecipients(Message.RecipientType.TO, "reciever");
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(reciever));
             message.setSubject(subject);
             message.setText(text);
 
